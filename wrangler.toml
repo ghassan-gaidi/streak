@@ -1,0 +1,10 @@
+name = "crypto-price-api"
+main = "src/index.js"
+compatibility_date = "2026-06-01"
+
+[[kv_namespaces]]
+binding = "CACHE"
+id = "ba36484f6b1c4645b9fe771832d45cae"
+
+[env.production]
+vars = { FREE_LIMIT = "100", PRO_MIN_LIMIT = "10000" }
