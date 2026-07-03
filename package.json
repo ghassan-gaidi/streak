@@ -1,7 +1,7 @@
 {
   "name": "crypto-price-api",
   "version": "1.0.0",
-  "description": "Streak — Crypto Price API Pro",
+  "description": "Streak — Real-time crypto prices. Market data, delivered.",
   "main": "src/index.js",
   "scripts": {
     "dev": "wrangler dev",

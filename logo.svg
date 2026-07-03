@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#DC2626"/>
+      <stop offset="100%" stop-color="#991B1B"/>
+    </linearGradient>
+  </defs>
+  <!-- Geometric angular S mark — sharp, bold, crimson -->
+  <path d="M70 40 L135 40 L135 65 L95 65 L95 85 L130 85 L130 115 L95 115 L95 135 L135 135 L135 160 L70 160 L70 135 L70 115 L70 85 L70 65 Z"
+        fill="url(#g)"/>
+</svg>

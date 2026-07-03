@@ -1,4 +1,4 @@
-# AGENTS.md — Crypto Price API
+# AGENTS.md — Streak
 
 > Crypto price data API. CF Worker with Polar subscription.
 > Live at: crypto-price-api.leo2574.workers.dev

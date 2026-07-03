@@ -179,56 +179,60 @@ function getLandingPage(rl) {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Streak — Market data, delivered.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#08080E;color:#D4D4D8;font-family:system-ui,sans-serif;min-height:100vh}
-.nav{display:flex;align-items:center;gap:1.5rem;padding:1rem 2rem;border-bottom:1px solid rgba(255,255,255,0.06);font-size:0.85rem}
+body{background:#08080E;color:#D4D4D8;font-family:'Space Grotesk',system-ui,sans-serif;min-height:100vh}
+.nav{display:flex;align-items:center;gap:1.5rem;padding:1rem 2rem;border-bottom:1px solid rgba(255,255,255,0.06)}
 .nav-brand{font-weight:700;font-size:1.1rem;color:white;letter-spacing:-0.02em}
-.nav-brand em{font-style:normal;color:#6366F1}
-.nav-tag{color:#52525B;font-family:monospace;font-size:0.75rem}
+.nav-brand em{font-style:normal;color:#DC2626}
+.nav-tag{color:#52525B;font-family:'JetBrains Mono',monospace;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.08em}
 .nav-end{margin-left:auto;display:flex;gap:0.75rem}
-.nav-end a{color:#a1a1aa;text-decoration:none}
+.nav-end a{color:#a1a1aa;text-decoration:none;font-size:0.85rem}
 .nav-end a:hover{color:white}
+.nav-end .nav-cta{color:#DC2626;font-weight:600}
+.nav-end .nav-cta:hover{color:#ff3a3a}
 .container{max-width:800px;margin:0 auto;padding:3rem 2rem}
-.hero{text-align:center;padding:2rem 0 3rem}
-.hero h1{font-size:3.5rem;font-weight:700;color:white;letter-spacing:-0.03em;line-height:1.1;margin-bottom:0.75rem}
-.hero h1 em{font-style:normal;color:#6366F1}
-.hero .tagline{font-size:1.2rem;color:#a1a1aa;margin-bottom:0.5rem}
-.hero .sub{font-size:0.9rem;color:#52525B;font-family:monospace}
-.pricing-badge{display:inline-block;background:rgba(99,102,241,0.15);border:1px solid rgba(99,102,241,0.3);color:#818CF8;padding:0.4rem 1rem;border-radius:100px;font-size:0.8rem;font-weight:500;margin-top:1rem}
-.competition{font-size:0.8rem;color:#52525B;margin-top:0.5rem;font-family:monospace}
-.status-bar{display:flex;gap:1.5rem;justify-content:center;margin:1.5rem 0;font-family:monospace;font-size:0.85rem}
+.hero{text-align:center;padding:3rem 0 2.5rem}
+.hero .streak-logo{font-size:4.5rem;font-weight:700;color:#DC2626;letter-spacing:-0.04em;line-height:1;margin-bottom:0.5rem}
+.hero .tagline{font-size:1.15rem;color:#a1a1aa;margin-bottom:0.75rem}
+.hero .sub{font-size:0.8rem;color:#52525B;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:0.1em}
+.pricing-badge{display:inline-block;background:#DC2626;color:white;padding:0.35rem 1rem;border-radius:4px;font-size:0.8rem;font-weight:600;margin-top:1.25rem;box-shadow:0 0 20px rgba(220,38,38,0.35)}
+.competition{font-size:0.75rem;color:#52525B;margin-top:0.65rem;font-family:'JetBrains Mono',monospace}
+.status-bar{display:flex;gap:1.5rem;justify-content:center;margin:1.5rem 0;font-family:'JetBrains Mono',monospace;font-size:0.8rem}
 .status-bar .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#10B981;margin-right:0.4rem;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.5}}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:2rem 0}
 @media(max-width:600px){.grid{grid-template-columns:1fr}}
-.card{border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:1.5rem;background:rgba(255,255,255,0.02);transition:border-color 0.3s}
-.card:hover{border-color:rgba(99,102,241,0.3)}
+.card{border:1px solid rgba(255,255,255,0.08);border-radius:4px;padding:1.5rem;transition:border-color 0.3s}
+.card:hover{border-color:#DC2626}
 .card h2{font-size:1rem;color:white;margin-bottom:0.75rem;font-weight:600}
 .card p{color:#a1a1aa;font-size:0.9rem;line-height:1.6;margin-bottom:0.5rem}
-.card code{display:block;background:rgba(0,0,0,0.4);padding:0.75rem;border-radius:8px;font-family:'JetBrains Mono',monospace;font-size:0.82rem;color:#22D3EE;margin:0.5rem 0;border:1px solid rgba(255,255,255,0.05);overflow-x:auto}
-.card .label{font-size:0.75rem;color:#52525B;text-transform:uppercase;letter-spacing:0.1em;font-family:monospace;margin-bottom:0.25rem}
+.card code{display:block;background:#0D0D14;padding:0.75rem;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:0.82rem;color:#22D3EE;margin:0.5rem 0;border:1px solid rgba(255,255,255,0.05);overflow-x:auto}
+.card .label{font-size:0.7rem;color:#52525B;text-transform:uppercase;letter-spacing:0.12em;font-family:'JetBrains Mono',monospace;margin-bottom:0.25rem}
 .price-card{text-align:center;padding:2rem}
 .price-card .price{font-size:2.5rem;font-weight:700;color:white}
 .price-card .price em{font-style:normal;color:#10B981}
-.price-card .period{color:#52525B;font-size:0.85rem}
+.price-card .period{color:#52525B;font-size:0.8rem;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:0.08em}
 .price-card ul{list-style:none;margin:1.5rem 0;text-align:left}
-.price-card li{padding:0.4rem 0;color:#a1a1aa;font-size:0.9rem}
+.price-card li{padding:0.4rem 0;color:#a1a1aa;font-size:0.85rem}
 .price-card li::before{content:'✓';color:#10B981;margin-right:0.5rem}
-.btn{display:inline-block;border:1px solid #6366F1;color:#818CF8;padding:0.7rem 1.5rem;border-radius:8px;text-decoration:none;font-size:0.9rem;transition:all 0.3s;font-weight:500}
-.btn:hover{background:rgba(99,102,241,0.1);border-color:#818CF8}
-.btn-primary{background:#6366F1;color:white;border-color:#6366F1}
-.btn-primary:hover{background:#4F46E5;border-color:#4F46E5}
-.btn-outline{border-color:rgba(255,255,255,0.15);color:#a1a1aa}
-.btn-outline:hover{border-color:rgba(255,255,255,0.3);color:white}
+.btn{display:inline-block;border:1px solid rgba(255,255,255,0.15);color:#a1a1aa;padding:0.65rem 1.5rem;border-radius:4px;text-decoration:none;font-size:0.85rem;transition:all 0.3s;font-weight:500}
+.btn:hover{color:white;border-color:rgba(255,255,255,0.3)}
+.btn-primary{background:#DC2626;color:white;border-color:#DC2626;font-weight:600;box-shadow:0 0 20px rgba(220,38,38,0.3)}
+.btn-primary:hover{background:#b71c1c;border-color:#b71c1c;box-shadow:0 0 28px rgba(220,38,38,0.5)}
+.btn-outline{border-color:rgba(255,255,255,0.12);color:#a1a1aa}
+.btn-outline:hover{border-color:rgba(255,255,255,0.25);color:white}
 .endpoints{margin:2rem 0}
 .endpoint-row{display:flex;justify-content:space-between;align-items:center;padding:0.75rem 0;border-bottom:1px solid rgba(255,255,255,0.04)}
 .endpoint-row:last-child{border-bottom:none}
-.endpoint-row .method{color:#6366F1;font-family:monospace;font-size:0.8rem;font-weight:600;min-width:3rem}
-.endpoint-row .path{color:white;font-family:monospace;font-size:0.85rem}
-.endpoint-row .desc{color:#a1a1aa;font-size:0.85rem;text-align:right;max-width:45%}
-footer{margin-top:4rem;text-align:center;color:#52525B;font-size:0.8rem;font-family:monospace;line-height:2;padding:2rem}
-footer a{color:#6366F1;text-decoration:none}
+.endpoint-row .method{color:#DC2626;font-family:'JetBrains Mono',monospace;font-size:0.75rem;font-weight:700;min-width:3rem;text-transform:uppercase}
+.endpoint-row .path{color:white;font-family:'JetBrains Mono',monospace;font-size:0.82rem}
+.endpoint-row .desc{color:#a1a1aa;font-size:0.8rem;text-align:right;max-width:45%}
+footer{margin-top:4rem;text-align:center;color:#52525B;font-size:0.75rem;font-family:'JetBrains Mono',monospace;line-height:2;padding:2rem}
+footer a{color:#DC2626;text-decoration:none}
 footer a:hover{text-decoration:underline}
 </style>
 </head>
@@ -237,33 +241,35 @@ footer a:hover{text-decoration:underline}
 <div class="nav-brand"><em>Streak</em></div>
 <div class="nav-tag">Market data, delivered.</div>
 <div class="nav-end">
-<a href="https://crypto-price-api.leo2574.workers.dev/health">Status</a>
-<a href="https://polar.sh/checkout/polar_c_89q6czDPBdoRm3niGHrOTrIQGcZxxCxR18j6Q4daPan">Buy Pro ($5)</a>
+<a href="https://crypto-price-api.leo2574.workers.dev/health">STATUS</a>
+<a class="nav-cta" href="https://polar.sh/checkout/polar_c_89q6czDPBdoRm3niGHrOTrIQGcZxxCxR18j6Q4daPan">PRO $5/MO</a>
 </div>
 </div>
 
 <div class="container">
 
 <div class="hero">
-<h1>Market data, <em>delivered.</em></h1>
-<div class="tagline">Real-time cryptocurrency prices. 50 coins. Updated every 30s.</div>
-<div class="sub">Built on Cloudflare Workers. Powered by CoinGecko.</div>
-<div class="pricing-badge">$5 once — no subscription</div>
-<div class="competition">CoinGecko Pro: $79/mo · CoinMarketCap: $29/mo · Streak: $5 forever</div>
+<div class="streak-logo">Streak</div>
+<div class="tagline">Real-time crypto prices. No bullshit.</div>
+<div class="sub">Cloudflare Worker · CoinGecko · 50 coins</div>
+<div class="pricing-badge">$5/mo — Pro plan</div>
+<div class="competition">CoinGecko Pro: $79/mo · CoinMarketCap: $29/mo · Streak: $5/mo</div>
 </div>
 
 <div class="status-bar">
-<span><span class="dot"></span> Operational</span>
-<span>50 coins tracked</span>
-<span>Your tier: ${tier} (${tierLabel})</span>
+<span><span class="dot"></span> OPERATIONAL</span>
+<span>50 COINS TRACKED</span>
+<span>TIER: ${tier} (${tierLabel})</span>
 </div>
 
 <div class="grid">
 <div class="card">
 <h2>Quick Start</h2>
-<p>Get the BTC price in one curl:</p>
+<div class="label">BTC price</div>
 <code>curl https://crypto-price-api.leo2574.workers.dev/price/bitcoin</code>
+<div class="label">ETH price</div>
 <code>curl https://crypto-price-api.leo2574.workers.dev/price/ethereum</code>
+<div class="label">SOL price</div>
 <code>curl https://crypto-price-api.leo2574.workers.dev/price/solana</code>
 <p style="margin-top:0.75rem;font-size:0.8rem">Returns: price_usd, change_24h_pct, volume_24h_usd, market_cap_usd</p>
 </div>
@@ -293,34 +299,34 @@ footer a:hover{text-decoration:underline}
 <div class="price-card card">
 <h2 style="font-size:1rem;color:white;margin-bottom:1rem">Free</h2>
 <div class="price"><em>$0</em></div>
-<div class="period">forever</div>
+<div class="period">Forever</div>
 <ul>
 <li>100 requests/day per IP</li>
 <li>No API key needed</li>
 <li>All endpoints accessible</li>
 <li>30s cache (always fresh)</li>
 </ul>
-<a class="btn btn-outline" href="https://crypto-price-api.leo2574.workers.dev/price/bitcoin" style="width:100%;text-align:center">Try Free →</a>
+<a class="btn btn-outline" href="https://crypto-price-api.leo2574.workers.dev/price/bitcoin" style="width:100%;text-align:center">TRY FREE →</a>
 </div>
-<div class="price-card card" style="border-color:rgba(99,102,241,0.3)">
+<div class="price-card card" style="border-color:rgba(220,38,38,0.3)">
 <h2 style="font-size:1rem;color:white;margin-bottom:1rem">Pro</h2>
 <div class="price"><em>$5</em></div>
-<div class="period">one-time payment</div>
+<div class="period">Per month</div>
 <ul>
 <li>10,000 requests/day</li>
 <li>Polar license key (X-API-Key header)</li>
 <li>Priority support</li>
 <li>Same endpoints, higher limits</li>
 </ul>
-<a class="btn btn-primary" href="https://polar.sh/checkout/polar_c_89q6czDPBdoRm3niGHrOTrIQGcZxxCxR18j6Q4daPan" style="width:100%;text-align:center">Buy Pro →</a>
+<a class="btn btn-primary" href="https://polar.sh/checkout/polar_c_89q6czDPBdoRm3niGHrOTrIQGcZxxCxR18j6Q4daPan" style="width:100%;text-align:center">BUY PRO →</a>
 </div>
 </div>
 
 </div>
 
 <footer>
-<a href="mailto:leo2574@proton.me">Contact</a> · <a href="https://crypto-price-api.leo2574.workers.dev/health">Status</a> · <a href="https://github.com/ghassan-gaidi">GitHub</a><br>
-Streak · Market data, delivered. · Built by Cyrus & Leo
+<a href="mailto:leo2574@proton.me">CONTACT</a> · <a href="https://crypto-price-api.leo2574.workers.dev/health">STATUS</a> · <a href="https://github.com/ghassan-gaidi">GITHUB</a><br>
+Streak · Market data, delivered. · Built by Cyrus
 </footer>
 </body>
 </html>`;
