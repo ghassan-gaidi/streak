@@ -1,21 +1,10 @@
-# AGENTS.md — Streak
+# AGENTS.md — Streak (Archived → Dominion)
 
-> Crypto price data API. CF Worker with Polar subscription.
-> Live at: crypto-price-api.leo2574.workers.dev
+> **Consolidated into Dominion.** This API is no longer actively developed.
+> Dominion has all Streak endpoints plus 25+ more features.
+>
+> Dominion repo: ghassan-gaidi/crypto-empire
+> Dominion live: crypto-empire-ten.vercel.app
+> Dominion bot: @Crypt0Emp1reBot
 
-## Endpoints
-- `GET /health` — Health check
-- `GET /price/bitcoin` — BTC price
-- `GET /price/{coin}` — Any coin price
-- `GET /day` — Daily summary
-
-## Tech
-- Cloudflare Worker (ES module)
-- Wrangler for deployment
-- Polar subscription ($5/mo Pro)
-
-## Commands
-```bash
-npm run dev    # wrangler dev
-npm run deploy # wrangler deploy
-```
+The worker at crypto-price-api.leo2574.workers.dev still serves requests for existing integrations.
